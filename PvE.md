@@ -1,8 +1,8 @@
 server: PvE
 
-rev-number: 29
+rev-number: 30
 
-rev-date: 'Oct 7, 2022'
+rev-date: 'Jun 1, 2024'
 
 rev-post: 'https://nerd.nu/mc/pve'
 
