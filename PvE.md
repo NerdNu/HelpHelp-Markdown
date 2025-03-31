@@ -410,6 +410,8 @@ Region owners are also able to flow liquids in their own regions using the
 ### Locks
 > Commands for locking containers.
 
+Test words! (Bolt?)!
+
 You can lock chests, trapped chests, furnaces, shulker boxes, skulls, beacons,
 dispensers, droppers, jukeboxes, hoppers, conduits, turtle eggs, brewing stands, and bee hives.
 
