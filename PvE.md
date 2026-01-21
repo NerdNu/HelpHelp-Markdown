@@ -1,10 +1,12 @@
 server: PvE
 
-rev-number: 30
+rev-number: 31
 
-rev-date: 'Jun 1, 2024'
+rev-date: 'Sept 19, 2024'
 
 rev-post: 'https://nerd.nu/mc/pve'
+
+currency: 'Nerd Bonds'
 
 ====
 ## Default
@@ -12,7 +14,6 @@ rev-post: 'https://nerd.nu/mc/pve'
 > Use `/help help` to learn about the help system. Read this help in your web browser at http://nerd.nu/help/pve.
 
 * PvE
-* Creative
 * Features
 * Rules
 * FAQ
@@ -21,7 +22,6 @@ rev-post: 'https://nerd.nu/mc/pve'
 * ModReqs
 * Stuck
 * Locks
-* Region Locks
 * Claims
 * Protection
 * Towns
@@ -37,11 +37,14 @@ rev-post: 'https://nerd.nu/mc/pve'
 * Spawn
 * Custom Drops
 * Doppelgangers
-* Elytras
+* Elytra
 * Horses
+* Pets
 * Minecarts
 * MapWorld
 * Teleports
+* Warps
+* Homes
 * Lag
 * Redstone
 * Revisions
@@ -51,7 +54,6 @@ rev-post: 'https://nerd.nu/mc/pve'
 * Grief
 * Web
 * Servers
-* Mumble
 * Discord
 * Steam
 * Nerd
@@ -60,7 +62,6 @@ rev-post: 'https://nerd.nu/mc/pve'
 * Volunteer
 * Plugins
 * Commands
-* Aliases
 
 ====
 
@@ -99,17 +100,14 @@ If 60% of the players online sleep, night will pass.
 > Claiming land to build on.
 
 Land claims indicate areas which you intend to build within.
-Once you have a rough claim fence installed /modreq to have a moderator create your claim.
+Once you have 4 clearly marked corners made from non-natural blocks covering a rectangular area `/modreq` to have a moderator create your claim.
 A build-allow region will then be created for your claim, which will allow for everyone to gather resources from the area but also make it clear that the area is claimed.
-If you want to find out if you are currently in a region, use /rg i.
-Claims should be rectangular with clearly marked corners and fences made from non-natural blocks.
-They do not need signs or for the fence to form a continuous wall.
-Claims should not be excessively large and, while not required, we recommend a buffer of 3-5 blocks between claims.
+If you want to find out if you are currently in a region, use `/rg i`.
+Claims should not be excessively large and, while not required, we recommend a buffer of 3-5 blocks between claims for server harmony.
 Claims must be used within a reasonable timeframe and cannot encompass other claims.
 
 Admins reserve the right to invalidate a claim for any of the following reasons: Being too large (larger than you will reasonably use), claiming an area solely for access to resource mining, encircling another claim in an effort to take over, an incomplete or poorly identifiable claim fence, or violating any other build rules currently in place.
 Don't block waterways with your claim fence, place it one block above the waterline or place regular access points.
-It is best practice to allow a three to five block buffer between your claim and the nearest claim fencing for server harmony.
 Claims and the builds associated with them should not block off areas of the map.
 
 
@@ -127,17 +125,16 @@ For now, try `/help Plugins` or `/help <command>`.
 > Custom items dropped by mobs.
 
 
-All hostile and passive mobs have a small chance of dropping their head when killed by a player, or always when killed by a charged creeper. If Minecraft has a standard head for the mob (the dragon, skeletons, zombies and creepers) then that item will be dropped.
-Otherwise, it will be a player head with a skin that matches the mob. For example, witches drop the *MHF_Witch* player head.
+All hostile and passive mobs have a small chance of dropping their head when killed by a player, or always when killed by a charged creeper. If Minecraft has a standard head for the mob (creeper, ender dragon, piglin, skeleton, or zombie) then that item will be dropped.
+Otherwise, it will be a player head with a skin that matches the mob.
+For example, witches drop the *MHF_Witch* player head.
+The drops are handled by the NerdNuCustomDrops plugin, and the full list of heads can be found with `/mobhead list`.
 
-The drop probabilities of these custom drops and the player skin names are listed in the configuration of the GoneBatty plugin, at http://goo.gl/mJpFqy.
+A custom currency called  ${currency}s will randomly drop from naturally generated items, blocks, and mobs.
+Items and blocks must be broken by the player, and mobs must be killed by the player for the chance of a ${currency}. 
 
-A Custom currency will randomly drop from items, blocks, and mobs. Items and blocks must be broken by the player, and mobs must be killed by the player for the chance of a drop. 
-
-Heart fragments will drop from ocean related blocks and items. You can use heart-fragments to create a Heart of the Sea. 
-
-Pokemine Cards have a chance to drop from most blocks, items, and mobs.
-
+Heart fragments will drop from ocean related blocks and items.
+You can use heart-fragments to create a Heart of the Sea. 
 
 
 ### Discord
@@ -146,13 +143,13 @@ Pokemine Cards have a chance to drop from most blocks, items, and mobs.
 Discord does text and voice chat in the browser, or with a downloadable client.
 Check it out at https://discord.gg/dKFfHY3.
 
-See also `/help Mumble`.
-
 
 ### Donate
 > How to support the servers.
 
 You can donate to help the server at http://nerd.nu/donate.
+
+See also `/help volunteer` for other ways to help out.
 
 
 ### Doppelgangers
@@ -169,16 +166,15 @@ The PvE server admins (P admins or Padmins) have special doppelgangers that are 
 To summon a Padmin doppelganger, you must place the named pumpkin on a T shape built from four diamond blocks, instead of two.
 Padmin doppelgangers are even stronger than regular doppelgangers, always appear as a group of all current Padmins when you summon any one of them, and the summoned Padmin drops the respective Padmin's head.
 You can find a current list of Padmins on the NerdNu staff page at http://nerd.nu/staff.
+Case matters!
 
 
-
-
-### Elytras
-> How to get elytras.
+### Elytra
+> How to get elytra.
 
 All naturally generated elytra has been removed from the end ships.
-One month after the start of the rev, elytra will be available by spawning the dragon in the end and successfully beating the multi-part dragon fight.
-
+One month after the start of the rev, elytra will be available by killing phantoms for randomly dropped Phantom Feathers, then killing the Ender Dragon for a Dragon head.
+Craft the elytra with 8 Phantom Feathers around 1 Dragon Head.
 
 
 ### Farms
@@ -194,13 +190,6 @@ If you come across an un-replanted field, ModReq it for crop grief.
 ### FAQ
 > Frequently-Asked Questions
 
-#### Why doesn't my water/lava flow?
-
-To prevent grief.
-You can make it flow with `/modreq flow`.
-See `/help Liquids`.
-You can also flow water inside a claim that you own by typing /flow and punching the top of the block the water is sitting on.
-
 #### Why can't I open my chest/door/whatever?
 
 You may be holding a wooden sword, which queries the WorldGuard region of whatever you click on.
@@ -208,32 +197,30 @@ Alternatively, maybe the chest is locked by someone else? See `/help Locks`.
 
 #### Why isn't my hopper working?
 
-Run `/chopper on` and then punch the container (e.g. chest, furnace) that the hopper is feeding into.
+Make sure all containers are owned by the same player.
 That will probably fix it.
 
 #### Why can't I build here?
 
 You're in a protection region.
-See `/help Protection`.
+See `/help Protection` or try `/rg i` to see the region name.
 You may even still be at spawn.
 Move further away and you will find unbuilt land.
 
 #### How can I join a town?
 
 Towns usually have a protection region that is the same as their name.
-
-Try `/region info <town>`, and then contact one of the players listed as a region owner.
+Try `/rg i` or `/rg i <town>`, and then contact one of the players listed as a region owner.
 
 #### What are the towns called?
 
 Most towns have an associated _place_.
-See `/help Places`.
+See `/help Places` or try `/place` to see a list of places.
 
 #### Why can't I light a portal?
 
 Portals connect up weirdly in Minecraft when they are too close together.
-The admins pre-make a number of portals when they build the map.
-To light a portal, you must build the portal frame, purchase 1 portal shard per portal space from the trader at spawn (a 2x3 portal would cost 6 shards), place those shards in a chest near the portal frame, then types /modreq please light this portal and name it ….
+To light a portal, you must build the portal frame, purchase 1 portal shard per portal space from the trader at spawn (a 2x3 portal would cost 6 shards), place those shards in a chest near the portal frame along with one padmin head (see `/help doppelgangers`), then types `/modreq` please light this portal and name it ….
 
 See `/help Portals`.
 
@@ -265,12 +252,12 @@ To prevent unauthorized edits using water or lava, liquids don't flow between pr
 
 Private chat for self-managing groups of players is provided by NerdClanChat (`/help NerdClanChat`).
 
-Tamed horses cannot be ridden except by their owner, but can be shared with commands (see `/help Horses`). Horses are improved through training, rather than by breeding.
+Tamed horses cannot be ridden except by their owner, but can be shared with commands (see `/help Horses`).
 
-We have a Mumble server for voice chat.
-See `/help Mumble` and a discord for voice and chat.
-See /Discord.
-We also have a top-down dynamic map and an isometric cartograph.
+We have a Discord server for text and voice chat.
+See `/help Discord` or `/Discord`.
+
+We also have a 3D or top-down live map.
 See `/help Map`.
 
 You can build custom maps to place in item frames.
@@ -285,6 +272,7 @@ See `/help Arenas` or outside of arenas with /pvp on.
 
 Fire spread is disabled on PvE.
 You can light your own fires with flint and steel.
+Lighting fires with a dispenser requires a `/modreq`.
 
 
 ### Grief
@@ -304,17 +292,17 @@ It is against the rules to kill tamed pets (cats, dogs) or trapped hostile mobs.
 You can build mob grinders around spawner blocks, in ocean monuments and using various other game mechanics.
 If you find a spawner, you can ModReq to get it protected against grief, even if you haven't built anything there yet.
 
-You can also build dark room grinders, but the chances are they won't perform as well on a multiplayer server as they would in the single player game.
+You can also build dark room grinders, but they may not perform as well on a multiplayer server as they would in the single player game.
 
 There will no longer be any requirement to have 100% of the drops remain public or any minimum percentage split.
-Exceptions are end grinders, guardian grinders, blaze grinders and the custom spawners, which must remain 100% public only at all times.
+Exceptions are end grinders, guardian grinders, and blaze grinders, which must remain 100% public only at all times.
 
 
 ### Iron Grinders
 > About Iron Grinders and costs.
 
 Due to the relative ease that high speed golem farms can now be created, we are allowing players to create their own vanilla golem grinders.
-This is due to new designs requiring far less villagers than before. 
+This is due to new designs requiring far less villagers than before.
 
 Please be efficient with your villager usage and don’t use too many.
 The PAdmins reserve the right to convert any and all golem grinders to spawners if it is deemed that they are causing excessive lag.
@@ -325,8 +313,8 @@ The PAdmins reserve the right to convert any and all golem grinders to spawners 
 
 * `/help` - show the topic index
 * `/help <n>` - read page _\<n\>_ of the index
-* `/help <text>` - show help about _\<text\>_. The _\<text\>_ can be a topic title, the name of a plugin, the name of a command beginning with '/', or just some arbitrary search term.
-* `/help <text> <n>` - show page _\<n\>_ of the search results for _\<text\>_.
+* `/help <text>` - show help about _\<text\>_. The _\<text\>_ can be a topic title, the name of a plugin, the name of a command beginning with '/', or just some arbitrary search term
+* `/help <text> <n>` - show page _\<n\>_ of the search results for _\<text\>_
 
 Example: `/help features 2` - read page 2 of the "Features" topic.
 
@@ -343,32 +331,21 @@ The only way to set your home on PvE is to sleep in a bed.
 ### Horses
 > About horses on PvE.
 
-Any horses you tame are automatically locked by the `EasyRider` plugin and cannot be ridden by anyone else without your permission.
-`EasyRider` also handles locking of llamas.
+Any horses you tame are automatically locked by the `CritterGuard` plugin and cannot be ridden by anyone else without your permission.
+`CritterGuard` also handles locking of ridable and non-ridable pets.
 
-On PvE, all horses spawned naturally or by breeding have very poor performance attributes.
-Their attributes are _only_ improved by training:
-
- * _Speed_ is improved by total horizontal distance traveled while on the ground.
- * _Health_ is improved by total weight of gold consumed, in the form of golden carrots and golden apples.
- * _Jump Strength_ is improved by total horizontal distance traveled in the air.
-
-The current performance of a horse in each of these three abilities is characterized by a _level_ number.
-The attributes of a horse in a particular ability only change when the _level_ increases to the next whole number, and each ability has a _maximum level_ beyond which further training will not improve that ability.
-
-To see the current ability levels of a horse, use `/horse-info`.
-To see how much training is required to attain a particular level, use `/horse-upgrades`. To see who has the best horse in a specific ability, use `/horse-top`.
-
-You can see a list of all horses you own with `/horse-list`, and you can get directions to a specific horse with `/horse-gps`.
-
-For more information about these commands, see `/help EasyRider` or the plugin home page, https://github.com/NerdNu/EasyRider.
+Horse stats and breeding on PvE are vanilla.
+Use `/cg info` to see a horse's stats.
+Breed two horses together with high stats for (on average) better stats offspring.
+Cull sub-par offspring and repeat to slowly get better and better horses.
 
 
 ### Lag
 > Guidance on reducing lag.
 
 Large numbers of mobs contribute to server lag.
-As a result we are running `MobLimiter`, which only allows you to keep certain quantities of mobs (type `/moblimiter limits` for additional details). MobLimiter culls excess animals when the chunk is unloaded, but it will always leave at least two of each type, including 2-4 of each wool color.
+As a result we are running `MobLimiter`, which only allows you to keep certain quantities of mobs (type `/moblimiter limits` for additional details).
+MobLimiter culls excess animals when the chunk is unloaded, but it will always leave at least two of each type, including 2-4 of each sheep color.
 
 Minecraft implements redstone very inefficiently.
 Even small redstone devices contribute disproportionately to server lag.
@@ -404,23 +381,19 @@ You can lock chests, trapped chests, furnaces, shulker boxes, skulls, beacons, d
 All of these blocks automatically lock privately to you when you place them,
 but you can change who can access them using the following commands:
 
- * `/bpublic` - Allows anyone to access the contents but not break the chest.
-    Useful for "Free Stuff" chests.
- * `/bdeposit` - Allows people to open the chests and put items inside, but only the owner can remove items.
- * `/bmodify add <name>` - Add players to the access list.
-   can add other players.
- * `/bmodify remove <name>` - Remove a player from the lock.
- * `/bgroup create <groupname>` - Create a group that when added to a container all members can access it.
- * `/bgroup add <groupname> <playername>` - Adds a player to a group.
- * `/bgroup remove <groupname> <playername>` - Removes a player from a group.
- * `/bremove` - Removes all locks from the block and allows anyone to break it.
-    If you just want to make a chest public, use `/bpublic` instead.
- * `/bprivate` - Lock a chest privately after it has been `/bremove`d.
- * `/bpublic` or `/bdeposit` - Lock a chest as public or donation after you have `/bremove`d it.
- * `/bpersist` - Make a single bolt command apply to multiple containers.
- * `/bhelp` - See a list of other commands related to locking.
-
-To view the commands related to locking or accessing an armour stand or item frame, type `/help ItemLocker`
+ * `/bpublic` - Allows anyone to access the contents but not break the chest; useful for "Free Stuff" chests
+ * `/bdeposit` - Allows people to open the chests and put items inside, but only the owner can remove items
+ * `/bmodify add <name>` - Add players to the access list
+ * `/bmodify remove <name>` - Remove a player from the lock
+ * `/bgroup create <groupname>` - Create a group that when added to a container all members can access it
+ * `/bgroup add <groupname> <playername>` - Adds a player to a group
+ * `/bgroup remove <groupname> <playername>` - Removes a player from a group
+ * `/bremove` - Removes all locks from the block and allows anyone to break it
+    If you just want to make a chest public, use `/bpublic` instead
+ * `/bprivate` - Lock a chest privately after it has been `/bremove`d
+ * `/bpublic` or `/bdeposit` - Lock a chest as public or donation after you have `/bremove`d it
+ * `/bpersist` - Make a single bolt command apply to multiple containers
+ * `/bhelp` - See a list of other commands related to locking
 
 It is your responsibility to secure your valuables.
 If someone takes something from a chest you gave them access to, we can not return it.
@@ -431,11 +404,11 @@ See also `/bhelp`.
 ### Map
 > About the current map.
 
-The map is a 10000 x 10000 square and is vanilla generation.
-The nether is 6000 x 6000 and the end is 5000 x 5000.
-The end is custom generated by cheezychicken.
+The overworld is a 10000 x 10000 square and is custom generated with Terralith.
+The nether is a 6000 x 6000 square and is vanilla generation.
+The end is a 5000 x 5000 square and is custom generated by PPGOME & EggyEgg.
 
-A top-down live map of the overworld can be seen at http://nerd.nu/maps/pve/live and an isometric cartograph can be viewed at http://nerd.nu/maps/pve/.
+A 3D and top-down live map of the worlds can be seen at http://nerd.nu/maps/pve/live.
 However, note that the map will not be visible for an initial period at the start of the rev to allow for exploration.
 
 
@@ -444,7 +417,7 @@ However, note that the map will not be visible for an initial period at the star
 
 Mapworld is a world accessible at spawn with an empty inventory.
 People can create maps inside with the assistance of a creative mode inventory and limited world edit.
-Mapworld has once more carried over from the prior revision!
+Mapworld is carried over between revisions.
 
 To enter Mapworld there is a clickable sign at spawn to warp you, you will need to have an empty inventory to enter.
 Once in Mapworld you can start creating you artwork by locating an empty plot (which can easily be found from viewing the livemap) and typing /nerdplot claim while standing in the empty plot.
@@ -457,17 +430,9 @@ To exit Mapworld head back to the spawn location or use /spawn, a warp sign foun
 
 
 ### Minecarts
-> Fast minecarts on PvE
+> Minecart speed on PvE
 
-HyperCarts has a faster-than-vanilla, default speed setting to help you traverse the map faster, and importantly, the ability for players to adjust their personal cart speed to mitigate issues on slow connections.
-
-Useful commands:
-
-* /cart-speed help - Show usage help.
-* /cart-speed - Show your current personal maximum minecart speed.
-* /cart-speed <number> - Set a new personal maximum minecart speed.
-
-You can also stack carts by placing single minecarts into a crafting inventory or also by running /stackcarts, while having minecarts in your inventory.
+Minecarts for PvE revision ${rev-number} are vanilla.
 
 
 ### ModReqs
@@ -483,24 +448,15 @@ You do not need to be online for your request to be fulfilled.
 The coordinates where you ran `/modreq` are saved with your request.
 You typically use ModReqs to make water/lava flow, report grief or other rule-breaking, or to get your build protected.
 
-You can see your open requests with `/check` or by visiting http://nerd.nu/modreq/pve.pl.
+You can see your open requests with `/check` or by visiting http://nerd.nu/modreq/pve.
 You can cancel a request with `/done <number>`.
-
-
-### Mumble
-> About our Mumble voice-chat system.
-
-You can talk to other players and staff on our Mumble voice-chat server at **mumble.nerd.nu**, port **6162**.
-Download a Mumble client for your system from http://wiki.mumble.info/wiki/Main_Page.
-Please configure a push-to-talk key rather than using voice activation.
-
-We also support Discord for text and voice chat. See `/help Discord`.
 
 
 ### Nerd
 > About the nerd.nu organization.
 
 The nerd.nu organization is run entirely by volunteers and completely funded by donations from players.
+We launched June 10th, 2009 and our announcment post for Creative can be found at https://nerd.nu/origin with Survival and PvE launching soon after.
 You can find out more on the web.
 See `/help Web`.
 
@@ -512,7 +468,7 @@ Pets are tamed animals such as cats and dogs, farm animals (e.g sheep) that have
 It is against the rules to kill another player's pets.
 Note that hostile mobs will eventually despawn unless named with a nametag.
 
-Try /pinfo to see who a pet belongs to.
+Try `/pinfo` to see who a pet belongs to.
 
 
 ### Places
@@ -521,12 +477,12 @@ Try /pinfo to see who a pet belongs to.
 Places are points of interest on the server.
 Places are granted to the following types of build:
 
-* Nether and end portals.
-* Developed builds with multiple contributors.
-* Single player builds of significant work.
-* Server-wide large building projects.
-* Public quad+ grinders, blaze grinders, guardian grinders and special spawners.
-* Other reasons at admin discretion.
+* Nether and end portals
+* Developed builds with multiple contributors
+* Single player builds of significant work
+* Server-wide large building projects
+* Public quad+ grinders, blaze grinders, guardian grinders and special spawners
+* Other reasons at admin discretion
 
 You can see a list of places by typing `/place`.
 Type `/place <location>` to see its coordinates and to be pointed in the right direction.
@@ -551,9 +507,9 @@ You can also find a complete list of plugin documentation on our wiki at http://
 
 The revision will start with 8 hidden signs for netherpotals.
 The first player to find the sign will be allowed to create a portal for free within 100 blocks of the marker.
-Nether portals are also purchaseable by any player at a cost of 64 nerdtickets per nether portal shard (enchanted amethyst bought at spawn).
+Nether portals are also purchaseable by any player at a cost of 64 ${currency}s per nether portal shard (enchanted amethyst bought at spawn).
 This means that the smallest 3x2 portal will cost 6 Portal Shards.
-Please build your portal frame from obsidian then place your portal shards in a chest and make a modreq.
+Please build your portal frame from obsidian then place your portal shards in a chest along with a padmin doppel head and make a modreq.
 Your modreq should include the name you want for the portal.
 Once placed, portals will not be expanded or moved.
 If you want to expand your portal you must destroy it and replace it, paying again for all of the portal shards.
@@ -587,7 +543,8 @@ You can add additional members or owners to a protection region with `/rg addmem
 ### PvE
 > About PvE, the game.
 
-PvE stands for "Player vs. Environment". This means Survival mode, with the hardest difficulty, and no PvP (Player vs. Player combat).
+PvE stands for "Player vs. Environment".
+This means Survival mode, with the hardest difficulty, and no PvP (Player vs. Player combat).
 
 
 ### Redstone
@@ -603,7 +560,7 @@ See also `/help Lag`.
 ### Restarts
 > About server restarts.
 
-Every 4 hours our server restarts to help it run more smoothly.
+Every 6 hours our server restarts to help it run more smoothly.
 Players are sent to the lobby.
 A warning will appear on your screen 1 minute before, as well as a 10 second countdown.
 If you have your inventory open just before the restart, you could lose items, so be careful!
@@ -620,31 +577,31 @@ This is called a "revision" or "rev".
 No items are carried over into the new map. You start over with nothing.
 This is PvE Revision ${rev-number}, which began on ${rev-date}.
 See ${rev-post} for details.
-All previous map revisions are available for download.
+All previous map revisions are available for download at https://nerd.nu/backups.
 See `/help Web`.
 
 
 ### Rules
 > The rules of PvE in brief.
 
-* Be respectful to other players.
-* No sexism, racism, homophobia, or other hate speech is allowed.
-* No chat spam, advertising, or excessive trolling.
-* Do not reveal personal information about other players.
-* Absolutely no impersonation of staff is allowed.
-* Do not grief, spam blocks, or harvest crops without replanting. See also
-  `/help Farms`, `/help Grief`.
-* Do not kill a player's trapped mobs or animals. See also `/help Pets`.
-* If using another player's farm, remember to leave their breeding pair.
-* Do not x-ray - you will lose all of your items and edits. See also
-  `/help X-Ray`.
-* Do not exploit bugs or glitches or attempt to circumvent our protection
-  plugins including, but not limited to, LWC, WorldGuard, and NoCheatPlus.
-* Do not use hacks or hacked clients; that will get you banned.
-* No killing or trapping players except in clearly marked arenas.
-* No "Not Safe For Work" (NSFW) builds or skins.
-* Do not restrict access to builds, the map is considered open for exploration.
-* Exceptions and additional rules can be found at http://nerd.nu/rules.
+* Be respectful to other players
+* No sexism, racism, homophobia, or other hate speech is allowed
+* No chat spam, advertising, or excessive trolling
+* Do not reveal personal information about other players
+* Absolutely no impersonation of staff is allowed
+* Do not grief, spam blocks, or harvest crops without replanting.
+  See also `/help Farms`, `/help Grief`
+* Do not kill a player's trapped mobs or animals.
+  See also `/help Pets`
+* If using another player's farm, remember to leave their breeding pair
+* Do not x-ray - you will lose all of your items and edits.
+  See also `/help X-Ray`
+* Do not exploit bugs or glitches or attempt to circumvent our protection plugins including, but not limited to, LWC, WorldGuard, and NoCheatPlus
+* Do not use hacks or hacked clients; that will get you banned
+* No killing or trapping players except in clearly marked arenas
+* No "Not Safe For Work" (NSFW) builds or skins
+* Do not restrict access to builds, the map is considered open for exploration
+* Exceptions and additional rules can be found at http://nerd.nu/rules
 
 See also `/help Bans`.
 
@@ -668,7 +625,7 @@ Type `/place spawn` to be pointed in the right direction!
 ### Staff
 > About the staff of nerd.nu.
 
-At nerd.nu, as much as possible, all players are treated equally, so you won't see special titles for staff names in chat.
+At Nerd.Nu, as much as possible, all players are treated equally, so you won't see special titles for staff names in chat.
 To see which staff are currently in-game, use `/list` or `/modlist`.
 You can see the full list of all current and past staff at http://nerd.nu/staff.
 
@@ -699,7 +656,6 @@ Use portals for fast travel.
 Towns are large builds shared by a group of players.
 By convention, towns share a protection region, and the region owners are referred to as "mayors", since only they can add new region members.
 Typically, towns will not be granted protection over their whole claim area until substantial builds are present.
-However, you can `/modreq` to ask for a small region to be made to lock shared chests to all region members (see `/help Region Locks`).
 
 Although mayors can set standards for builds within their town and even evict members, it is against the rules to remove non-compliant builds against the builder's wishes.
 Instead, do a ModReq asking an admin to move the build for you.
@@ -735,7 +691,7 @@ See `/help Liquids`.
 * http://nerd.nu/maps/pve - current isometric cartograph
 * http://wiki.nerd.nu/carto/pve - cartographs of past revs
 * http://nerd.nu/maps/pve/live - current top-down live map
-* http://nerd.nu/modreq/pve.pl - check your ModReqs
+* http://nerd.nu/modreq/pve - check your ModReqs
 
 ++General Links++:
 * http://nerd.nu - main site
